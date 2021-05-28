@@ -22,22 +22,6 @@ public class Employee extends Person implements Billable {
         this.salary = salary;
     }
 
-    public double getBalanceDue(Map<String, Double> balanceMap) {
-        double totalBalanceDue = 0.00;
-
-        for (String service : balanceMap.keySet()) {
-            if (service.toLowerCase().equals("walking")) {
-                totalBalanceDue += balanceMap.get(service) * 0.50;
-            }
-            else {
-                totalBalanceDue += balanceMap.get(service);
-            }
-        }
-
-        return totalBalanceDue;
-
-    }
-
     @Override
     public String getFullName() {
         return this.getLastName() + ", " + this.getFirstName();

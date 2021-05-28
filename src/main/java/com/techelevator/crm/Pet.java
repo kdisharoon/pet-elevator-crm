@@ -5,40 +5,13 @@ import java.util.List;
 
 public class Pet {
 
-<<<<<<< HEAD
-=======
     // ## INSTANCE VARIABLES ##
 
->>>>>>> 32d2e4efe0d558330fbcb8b0f7e855f501d2a9ad
     private String name;
     private String species;
     private List<String> vaccinations = new ArrayList<>();
 
-<<<<<<< HEAD
-    public Pet(String name, String species) {
-        this.name = name;
-        this.species = species;
-        vaccinations.add("Rabies");
-        vaccinations.add("Super Rabies");
-        vaccinations.add("Ultra Rabies");
-        vaccinations.add("Rabiesnado");
-        vaccinations.add("Rabies 2: Electric Boogaloo");
-    }
-
-    public String listVaccinations() {
-        String vaccinationList = "";
-
-        for (String str : vaccinations) {
-            vaccinationList += str + ", ";
-        }
-
-        vaccinationList = vaccinationList.substring(0, vaccinationList.length() - 2);
-
-        return vaccinationList;
-    }
-=======
     // ## GETTERS AND SETTERS ##
->>>>>>> 32d2e4efe0d558330fbcb8b0f7e855f501d2a9ad
 
     public String getName() {
         return name;
@@ -63,14 +36,16 @@ public class Pet {
     public void setVaccinations(List<String> vaccinations) {
         this.vaccinations = vaccinations;
     }
-<<<<<<< HEAD
-=======
 
     // ## CONSTRUCTORS ##
-
     public Pet(String name, String species) {
         this.name = name;
         this.species = species;
+        this.vaccinations.add("Rabies");
+        this.vaccinations.add("Super Rabies");
+        this.vaccinations.add("Ultra Rabies");
+        this.vaccinations.add("Rabiesnado");
+        this.vaccinations.add("Rabies 2: Electric Boogaloo");
     }
 
     // ## METHODS ##
@@ -84,5 +59,4 @@ public class Pet {
         return output;
     }
 
->>>>>>> 32d2e4efe0d558330fbcb8b0f7e855f501d2a9ad
 }
