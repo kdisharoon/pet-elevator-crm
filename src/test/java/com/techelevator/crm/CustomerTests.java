@@ -21,4 +21,15 @@ public class CustomerTests {
 
         Assert.assertEquals("The customer's balance due is not correct.", 135.00, methodTotal, 0.0);
     }
+
+    @Test
+    public void get_customer_balance_due_on_empty_map() {
+        Customer customer = new Customer("Joe", "Sixpack");
+        Map<String, Double> testMap = new HashMap<>();
+
+        double methodTotal = customer.getBalanceDue(testMap);
+
+        Assert.assertEquals("The customer's balance due is not correct.", 0.00, methodTotal, 0.0);
+    }
+
 }

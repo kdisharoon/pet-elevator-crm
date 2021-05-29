@@ -38,14 +38,10 @@ public class Pet {
     }
 
     // ## CONSTRUCTORS ##
+
     public Pet(String name, String species) {
         this.name = name;
         this.species = species;
-        this.vaccinations.add("Rabies");
-        this.vaccinations.add("Super Rabies");
-        this.vaccinations.add("Ultra Rabies");
-        this.vaccinations.add("Rabiesnado");
-        this.vaccinations.add("Rabies 2: Electric Boogaloo");
     }
 
     // ## METHODS ##
@@ -55,7 +51,11 @@ public class Pet {
         for (String vax : vaccinations) {
             output += vax + ", ";
         }
-        output = output.substring(0, output.length() - 2);
+
+        if (output.length() > 2) {      //strip the trailing comma off if there is one (i.e. if the list is not empty)
+            output = output.substring(0, output.length() - 2);
+        }
+
         return output;
     }
 

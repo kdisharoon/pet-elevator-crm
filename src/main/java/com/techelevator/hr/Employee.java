@@ -72,7 +72,7 @@ public class Employee extends Person implements Billable {
     public double getBalanceDue(Map<String, Double> servicesRendered) {
         double balanceDue = 0.0;
         for (String service : servicesRendered.keySet()) {
-            if (service.toLowerCase().equals("walking")) {
+            if (service.trim().equalsIgnoreCase("walking")) {
                 balanceDue += (servicesRendered.get(service) * 0.5);
             } else {
                 balanceDue += servicesRendered.get(service);
